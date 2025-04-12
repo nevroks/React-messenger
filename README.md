@@ -1,50 +1,47 @@
-# React + TypeScript + Vite
+# React приложение
+# Описание проекта
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ну собственно что тут говорить, это прям комерческий проект, но мы решили его не запускать по определённым причинам, а раз не запустили то просто залью его сюда в свой гит.
 
-Currently, two official plugins are available:
+Стек: React, Typescript, Vite, SocketIo, React Query(tanstack query),Zustand.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Добавочные библеотеки: Легче просто package json проверить.
 
-## Expanding the ESLint configuration
+По функционалу: Вообще функционал прямо большой, тут можно условно всё что можно в какомнибудь телеграмме, то есть там создавать чаты/группы, как то их модерировать, взаимодествовать с сообщениями по типу ответов,зареплений и тд.
+Создавать различные "Компании" которые являются по сути местом в котором можно будет регистрировать аккаунты создавать чаты и выполнять прочий функционал.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Установка
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Для установки проекта вам потребуются следующие инструменты:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Браузер
+- Текстовый редактор или интегрированная среда разработки (IDE)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Скачайте файлы проекта или склонируйте репозиторий с помощью команды:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Копировать
+git clone https://github.com/your-username/project-name.git
+
+## Использование
+
+Чтобы просмотреть веб-страницу, откройте файл `index.html` в вашем выбранном браузере:
+bash
+open index.html
+
+Затем вы сможете увидеть вёрстку вашей веб-страницы.
+
+## Контрибьютинг
+
+Если вы хотите внести свой вклад в проект, будем рады принять ваши предложения и улучшения. Для этого необходимо выполнить следующие шаги:
+
+1. Форкните репозиторий.
+2. Создайте новую ветку (`git checkout -b feature/your-feature`).
+3. Внесите необходимые изменения в код.
+4. Сделайте коммит (`git commit -am 'Added feature'`).
+5. Запушьте ветку (`git push origin feature/your-feature`).
+6. Создайте Pull Request, чтобы мы могли рассмотреть ваши изменения.
+
+## Лицензия
+
+Этот проект лицензирован согласно условиям [MIT License](LICENSE).
