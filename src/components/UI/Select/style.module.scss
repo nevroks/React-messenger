@@ -1,0 +1,30 @@
+.SelectMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+
+    &.opened {
+        display: flex;
+        border-color: #007bff;
+    }
+}
+
+.SelectMenuOption {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &hover {
+        background-color: #f0f0f0;
+    }
+
+    &.selected {
+        background-color: #007bff;
+        color: white;
+    }
+}

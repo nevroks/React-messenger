@@ -1,0 +1,59 @@
+stages:
+  - build
+  - push
+  - deploy
+
+variables:
+  DOCKER_DRIVER: overlay2
+  REGISTRY_URL: "cr.yandex"
+  FRONTEND_IMAGE: "$REGISTRY_URL/crpihpplbca7ji035lo7/frontend:${CI_PIPELINE_ID}"  
+
+before_script:
+  - if ! command -v docker &> /dev/null; then
+      apt-get update && apt-get install -y docker.io;
+    fi
+  - if ! command -v sshpass &> /dev/null; then
+      apt-get update && apt-get install -y sshpass;
+    fi
+  - if ! command -v docker-compose &> /dev/null; then
+      apt-get update && apt-get install -y docker-compose;
+    fi
+
+build_frontend:
+  stage: build
+  script:
+    - echo "Сборка Docker образа фронта..."
+    - docker build -t frontend_container . || { echo "Ошибка сборки фронта"; exit 1; }
+  tags:
+    - docker
+
+push_frontend_image:
+  stage: push
+  script:
+    - echo "Вход в Docker реестр Яндекс.Облака..."
+    - echo "$REGISTRY_PASSWORD" | docker login --username "$REGISTRY_USERNAME" --password-stdin $REGISTRY_URL || { echo "Ошибка входа в реестр"; exit 1; }
+    - echo "Загрузка образа фронта в реестр с тегом ${CI_PIPELINE_ID}..."
+    - docker tag frontend_container $FRONTEND_IMAGE
+    - docker push $FRONTEND_IMAGE || { echo "Ошибка загрузки фронта в реестр"; exit 1; }
+  tags:
+    - docker
+
+deploy_frontend_qa:
+  stage: deploy
+  script:
+    - echo "Настройка SSH доступа с использованием пароля..."
+    - ssh-keyscan $DEPLOY_SERVER_URL >> ~/.ssh/known_hosts
+    - echo "Подключение к серверу и обновление Docker Compose..."
+    - |
+      sshpass -p "$DEPLOY_PASSWORD" ssh -o LogLevel=ERROR -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER_URL <<EOF
+        cd front
+        docker-compose stop
+        docker-compose rm $(docker ps -aq)
+        sed -i 's|image: cr.yandex/crpihpplbca7ji035lo7/frontend:.*|image: cr.yandex/crpihpplbca7ji035lo7/frontend:${CI_PIPELINE_ID}|' docker-compose.yml
+        docker-compose up -d
+      EOF
+  tags:
+    - ssh
+  when: manual # Ручной запуск только для этого job
+
+

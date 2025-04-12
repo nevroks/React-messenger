@@ -1,0 +1,62 @@
+.dropdown {
+  position: absolute;
+  background-color: var(--white);
+  box-shadow: 0px 4px 8px var(--black);
+  border-radius: 8px;
+  width: 200px;
+  padding: 10px;
+  z-index: 1000;
+
+  .options,
+  .subOptions {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: var(--prim);
+    }
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  .backOption {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover {
+      background-color:  var(--prim);
+    }
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  .swipeAnimation {
+    animation: slideIn 0.3s ease-in-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}

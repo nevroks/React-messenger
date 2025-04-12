@@ -1,0 +1,85 @@
+.message-item {
+    width: 76%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    position: relative;
+    gap: 6px;
+    margin-right: auto;
+    padding: 5px 5px;
+
+    &-body {
+        position: relative;
+        background: var(--white);
+        padding: 14px;
+        border-radius: 12px 2px 12px 12px;
+        max-width: 60%;
+        color: var(--black-gray);
+        font-weight: 400;
+        position: relative;
+        word-wrap: break-word;
+        display: flex;
+        flex-direction: column;
+
+        a {
+            color: var(--blue)
+        }
+    }
+
+    &:hover {
+        background-color: var(--light-gray);
+    }
+
+    .user-avatar {
+        width: 28px;
+        height: 28px;
+        background: rgb(229, 239, 255);
+        border-radius: 26px;
+    }
+
+
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.selected {
+    background-color: var(--blue) !important;
+}
+
+.replied-message {
+    background-color: var(--prim);
+    border-left: 4px solid var(--blue);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+    position: relative;
+
+    &-content {
+        font-size: 1em;
+        color: var(--black-gray)
+    }
+}
+
+.MessageItemContent {
+    .doc-wrapper {
+        margin: 10px 0 0;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+        object-fit: fill;
+    }
+
+    .icon {
+        height: 20px;
+        width: 20px;
+        margin: 0 5px 0 0;
+    }
+}

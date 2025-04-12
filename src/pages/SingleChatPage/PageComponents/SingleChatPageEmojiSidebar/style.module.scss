@@ -1,0 +1,144 @@
+.emoji-sidebar {
+  width: 500px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease;
+
+  .top-bar {
+    height: 64px;
+    padding: 0 20px;
+    border-bottom: 1.5px solid var(--prim);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+
+    img {
+      transform: rotate(90deg);
+      width: 18px;
+      height: 18px;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 17px;
+    }
+  }
+
+  .main-emoji-sidebar-content {
+    width: 100%;
+    padding: 20px;
+
+    .generate-emoji-content {
+      width: 100%;
+      background: var(--light-blue);
+      border-radius: 8px;
+      padding: 8px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 6px;
+
+      img {
+        width: 18px;
+        height: 18px;
+      }
+
+      p {
+        color: var(--blue);
+        font-size: 14px;
+      }
+    }
+
+    .search-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px 8px 12px;
+      border: 1.5px solid transparent;
+      transition: all 0.1s ease-out;
+      border-radius: 26px;
+      background: var(--prim);
+      margin-top: 15px;
+
+      input {
+        width: 100%;
+      }
+
+      &.focused {
+        border: 1.5px solid var(--blue);
+      }
+    }
+
+    .emoji-categories {
+      overflow-y: scroll;
+      height: 75vh;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+
+    .emoji-category {
+      margin-bottom: 20px;
+
+      .category-name {
+        margin-bottom: 10px;
+        color: var(--last-gray);
+        font-weight: 500;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .emoji-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .emoji-item {
+      font-size: 24px;
+      cursor: pointer;
+      width: 43px;
+      height: 43px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      transition: all 0.1s linear;
+      justify-content: center;
+
+      &:hover {
+        background: #F5F5F5;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .fixed-category-body {
+    height: 20px;
+    display: flex;
+    align-items: center;
+
+    .fixed-category {
+      margin-top: 15px;
+      color: var(--last-gray);
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+
+  .loading-message {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

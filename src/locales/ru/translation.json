@@ -1,0 +1,15 @@
+{
+  "welcomeBack": "Добро пожаловать!",
+  "enterYourEmail": "Введите ваш адрес электронной почты",
+  "sendOtp": "Отправить OTP",
+  "sending": "Отправка...",
+  "enterOtp": "Введите OTP",
+  "validateOtp": "Проверить OTP",
+  "validating": "Проверка...",
+  "loadingMessages": "Загрузка сообщений...",
+  "errorLoadingMessages": "Ошибка при загрузке сообщений",
+  "noMessagesFound": "Сообщения для этого чата не найдены.",
+  "typeAMessage": "Напишите сообщение",
+  "send": "Отправить",
+  "sendingMessage": "Отправка..."
+}

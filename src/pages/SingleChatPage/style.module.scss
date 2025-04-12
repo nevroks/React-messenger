@@ -1,0 +1,48 @@
+.SingleChatPage {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+
+    &-content {
+        display: grid;
+        grid-template-columns: 1fr 0fr;
+        height: 100%;
+
+        &-left__chatView {
+            height: 100%;
+
+            &-chat {
+                transition: width 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+                &-messages {
+                    flex-grow: 1;
+                    overflow-y: auto;
+                    height: 75vh;
+
+                    &-messagesInput {
+                        position: sticky;
+                        bottom: 0;
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+}
+.SingleChatPage-content-left-chatView-chat-messages{
+    flex-grow: 1;
+    overflow-y: auto;
+    height: 75vh;
+}
+.SingleChatPage-content-left-chatView-chat-messagesInput {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}

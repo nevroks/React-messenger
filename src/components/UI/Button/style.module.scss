@@ -1,0 +1,15 @@
+.SingleChatPageSidebarInfoSideBar-leaveChat {
+  position: absolute;
+  bottom: calc(51px - (51px / 3));
+  height: 51px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-button {
+    font-size: 14px;
+    color: var(--light-red);
+    padding: 0 6px;
+  }
+}

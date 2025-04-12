@@ -1,0 +1,46 @@
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 320px;
+
+    &-text {
+        margin-bottom: 12px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 120%;
+        color: var(--dark-gray-alt);
+    }
+
+    &-buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
+
+        &-btn {
+            transition: color 0.3s ease, transform 0.2s ease;
+
+            &:hover {
+                color: var(--dark-gray-alt);
+            }
+
+            &:active {
+                transform: scale(0.98);
+                color: var(--med-gray);
+            }
+        }
+    }
+
+}
+
+.red {
+    color: var(--red);
+
+    &:hover {
+        color: var(--black-gray)
+    }
+
+    &:active {
+        transform: scale(0.96);
+    }
+}

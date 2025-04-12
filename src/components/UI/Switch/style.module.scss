@@ -1,0 +1,28 @@
+.switchContainer {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+.switchBackground {
+  width: 34px;
+  height: 18px;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #ccc;
+}
+
+.switchHandle {
+  width: 15px;
+  height: 15px;
+  background-color: var(--blue);
+  border-radius: 50%;
+  position: absolute;
+}

@@ -1,0 +1,25 @@
+.modal-upload {
+  max-width: 100%;
+
+  .text {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--black);
+  }
+
+  .button {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--black)
+  }
+
+  .file-name {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--black);
+    margin: 0 0 0 10px;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,89 @@
+.header-menu {
+    width: 100%;
+    height: 73px;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1.5px solid var(--prim);
+    padding: 15px 20px;
+
+    &-content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .messenger-link {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            padding: 8px 10px 8px 10px;
+            border-radius: 8px;
+            height: 35px;
+            background: var(--light-blue);
+
+            img {
+                width: 17px;
+                height: 17px;
+            }
+
+            p {
+                color: var(--dark-gray-alt);
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+
+        .header-actions {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 24px;
+
+            &-buttons {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 12px;
+                justify-content: flex-end;
+
+                .invite-team-button {
+                    border-radius: 8px;
+                    padding: 8px 12px 8px 10px;
+                    height: 35px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 6px;
+                    background: var(--blue);
+                    color: var(--white);
+
+                    img {
+                        width: 17px;
+                        height: 17px;
+                    }
+
+                    span {
+                        font-weight: 500;
+                    }
+                }
+
+                .comments-button {
+                    background: var(--prim);
+                    color: var(--dark-gray-alt);
+                }
+            }
+
+            .user-profile {
+                width: 36px;
+                height: 36px;
+                border-radius: 26px;
+                background: rgb(229, 239, 255);
+            }
+        }
+    }
+}

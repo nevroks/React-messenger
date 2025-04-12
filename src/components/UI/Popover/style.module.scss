@@ -1,0 +1,13 @@
+.popover {
+  background: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  color: var(--black-gray);
+  min-width: 170px;
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+}
+
+
+

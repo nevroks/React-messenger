@@ -1,0 +1,15 @@
+{
+  "welcomeBack": "Welcome Back!",
+  "enterYourEmail": "Enter your email",
+  "sendOtp": "Send OTP",
+  "sending": "Sending...",
+  "enterOtp": "Enter OTP",
+  "validateOtp": "Validate OTP",
+  "validating": "Validating...",
+  "loadingMessages": "Loading messages...",
+  "errorLoadingMessages": "Error loading messages",
+  "noMessagesFound": "No messages found for this chat.",
+  "typeAMessage": "Type a message",
+  "send": "Send",
+  "sendingMessage": "Sending..."
+}
